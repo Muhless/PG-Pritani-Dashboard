@@ -1,4 +1,6 @@
+import StatCard from "@/components/card/StatCard";
 import SummaryCard from "@/components/card/SummaryCard";
+import Tabs from "@/components/Tabs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,11 +17,13 @@ export default function DashboardPages() {
           praesentium?
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-5 ">
-        <SummaryCard title="Total Product" content={5} />
-        <SummaryCard title="Total Customer" content={3} />
-        <SummaryCard title="Total Sales" content={8} />
-        <SummaryCard title="Total Purchase" content={7} />
+      <div className="grid grid-cols-3 gap-5 ">
+        <StatCard />
+        <StatCard />
+        <StatCard />
+      </div>
+      <div>
+        <Tabs/>
       </div>
     </div>
   );

@@ -12,16 +12,16 @@ export default function SummaryCard({
   description = "description",
 }: SummaryCardProps) {
   return (
-    <div className="bg-white border p-4 rounded-lg space-y-2">
+    <div className="bg-white p-3 rounded-lg">
       <div className="flex items-center justify-between">
-        <h1>{title}</h1>
-        <div className="border rounded-full p-2">
+        <h3 className="text-sm text-gray-500">{title}</h3>
+        {/* <div className="border rounded-full p-2">
           <MoveUpRight size={18} />
-        </div>
+        </div> */}
       </div>
-      <p className="text-4xl">{content}</p>
+      <p className="text-xl font-bold">{content}</p>
       <div>
-        <p className="text-sm">{description}</p>
+        <p className="text-xs">{description}</p>
       </div>
     </div>
   );
