@@ -1,3 +1,6 @@
+import OrderCard from "./card/OrderCard";
+import SearchInput from "./ui/SearchInput";
+
 export default function Tabs() {
   return (
     <div>
@@ -8,8 +11,16 @@ export default function Tabs() {
           className="tab text-black"
           aria-label="Tab 1"
         />
-        <div className="tab-content border-base-300 bg-white p-10">
-          Tab content 1
+        <div className="tab-content">
+          <div className="flex flex-col">
+            <p>5 data found</p>
+            <SearchInput />
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <OrderCard />
+            <OrderCard />
+            <OrderCard />
+          </div>
         </div>
 
         <input
@@ -19,9 +30,7 @@ export default function Tabs() {
           aria-label="Tab 2"
           defaultChecked
         />
-        <div className="tab-content border-base-300 bg-white p-10">
-          Tab content 2
-        </div>
+        <div className="tab-content p-10">Tab content 2</div>
 
         <input
           type="radio"
@@ -29,9 +38,7 @@ export default function Tabs() {
           className="tab text-black"
           aria-label="Tab 3"
         />
-        <div className="tab-content border-base-300 bg-white p-10">
-          Tab content 3
-        </div>
+        <div className="tab-content p-10">Tab content 3</div>
       </div>
     </div>
   );
