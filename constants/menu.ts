@@ -5,6 +5,7 @@ import {
   ShoppingCart,
   User,
   Users,
+  UserSquare,
 } from "lucide-react";
 
 export const menus = [
@@ -15,7 +16,8 @@ export const menus = [
   {
     group: "Data",
     items: [
-      { label: "Supplier", href: "/suppplier", icon: User },
+      { label: "Employee", href: "/employee", icon: UserSquare },
+      { label: "Supplier", href: "/supplier", icon: User },
       { label: "Customer", href: "/customer", icon: Users },
       { label: "Product", href: "/product", icon: Box },
     ],

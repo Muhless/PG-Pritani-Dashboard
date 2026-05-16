@@ -12,12 +12,13 @@
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #a7c957;
-  --color-secondary: #6a994e;
-  --color-third: #386641;
-  --color-fourth: #bc4749;
-  --color-fifth: #f2e8cf;
-  --color-sixth: #ededed
+  --color-primaries: #6a994e;
+  --color-primary-light: #a7c957;
+  --color-primary-dark: #386641;
+  --color-sidebar: #1e3a2f;
+  --color-danger: #bc4749;
+  --color-bg: #f2e8cf;
+  --color-card: #f8f9fa;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -28,7 +29,7 @@
 } */
 
 body {
-  background: var(--background);
+  background: white;
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
 }

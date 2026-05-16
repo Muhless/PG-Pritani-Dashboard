@@ -36,13 +36,16 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="min-h-screen w-full grid lg:grid-cols-2">
+    <div className="min-h-screen w-full grid grid-cols-5">
       {/* left */}
-      <div className="hidden lg:flex items-center justify-center bg-emerald-500">
-        kiri
+      <div className="hidden lg:flex col-span-2 items-center justify-center bg-primary-dark">
+        <p className="text-white text-3xl text-center">
+          Penggilingan Padi
+          <br /> Pritani
+        </p>
       </div>
       {/* right */}
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center col-span-3">
         <div className="flex flex-col space-y-4">
           <h1 className="text-2xl items-center text-center">Login</h1>
           <form onSubmit={handleSubmit}>
@@ -54,7 +57,7 @@ export default function LoginForm() {
                   name="username"
                   id="username"
                   onChange={(e) => setEmail(e.target.value)}
-                  className="border-white border rounded-lg w-72 p-2 outline-none focus:border-emerald-500 transition-colors"
+                  className=" border border-emerald-500 rounded-lg w-72 p-2 outline-none focus:border-emerald-700 transition-colors"
                 />
               </div>
               <div className="flex flex-col space-y-2">
@@ -65,7 +68,7 @@ export default function LoginForm() {
                     name="password"
                     id="password"
                     onChange={(e) => setPassword(e.target.value)}
-                    className="border border-white rounded-lg w-72 p-2 outline-none transition-colors focus:border-emerald-500"
+                    className="border border-emerald-500 rounded-lg w-72 p-2 outline-none transition-colors focus:border-emerald-700"
                   />
                   {error && <p className="text-red-500 text-sm">{error}</p>}
                   <button
@@ -84,12 +87,12 @@ export default function LoginForm() {
               className="bg-emerald-500 w-72 mt-4 flex justify-center items-center p-2 rounded-lg cursor-pointer hover:bg-emerald-600 transition-colors"
             >
               {isLoading ? (
-                <div className="gap-2 flex items-center">
-                  <Loader2 size={16} className="animate-spin" />
+                <div className="gap-2 flex items-center text-white">
+                  <Loader2 size={16} className="animate-spin " />
                   Loading
                 </div>
               ) : (
-                "Masuk"
+                <p className="text-white">Masuk</p>
               )}
             </button>
           </form>
